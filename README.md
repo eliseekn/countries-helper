@@ -20,11 +20,14 @@ composer require eliseekn/countries-helper
 $countries = CountriesHelper::getAll();
 
 //In your blade file
-@foreach($countries as $country)
-@if (!is_null($country))
-    @foreach($country as $key => $value)<option value="{{ $key }}">{{ $value }}</option>@endforeach
-@endif
-@endforeach
+<label for="country" class="form-label">Select country</label>
+<select name="country" id="country" class="form-select">
+    @foreach($countries as $country)
+    @if (!is_null($country))
+        @foreach($country as $key => $value)<option value="{{ $key }}">{{ $value }}</option>@endforeach
+    @endif
+    @endforeach
+</select>
 ```
 
 ### Testing
