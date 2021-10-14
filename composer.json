@@ -3,7 +3,8 @@
     "description": "Helper for countries laravel package",
     "keywords": [
         "eliseekn",
-        "countries-helper"
+        "countries-helper",
+        "laravel"
     ],
     "homepage": "https://github.com/eliseekn/countries-helper",
     "license": "MIT",
@@ -12,6 +13,7 @@
         {
             "name": "N'Guessan Kouadio Elisée",
             "email": "eliseekn@gmail.com",
+            "homepage": "https://eliseekn.netlify.app",
             "role": "Developer"
         }
     ],
