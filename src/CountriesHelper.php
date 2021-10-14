@@ -23,7 +23,7 @@ class CountriesHelper
         return $countries->all()->map(function ($country) use ($countries) {
                 $country_name = $countries->where('cca2', $country->cca2)->first()[self::getLang()];
 
-                if (isset($country_name)) {
+                if (!empty($country_name)) {
                     return [$country->cca2 => utf8_decode($country_name)];
                 }
             })

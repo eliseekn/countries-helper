@@ -1,10 +1,9 @@
-# Very short description of the package
+# Countries helper
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/eliseekn/countries-helper.svg?style=flat-square)](https://packagist.org/packages/eliseekn/countries-helper)
 [![Total Downloads](https://img.shields.io/packagist/dt/eliseekn/countries-helper.svg?style=flat-square)](https://packagist.org/packages/eliseekn/countries-helper)
-![GitHub Actions](https://github.com/eliseekn/countries-helper/actions/workflows/main.yml/badge.svg)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+Helper for countries laravel package
 
 ## Installation
 
@@ -17,7 +16,15 @@ composer require eliseekn/countries-helper
 ## Usage
 
 ```php
-// Usage description here
+//In your controller
+$countries = CountriesHelper::getAll();
+
+//In your blade file
+@foreach($countries as $country)
+@if (!is_null($country))
+    @foreach($country as $key => $value)<option value="{{ $key }}">{{ $value }}</option>@endforeach
+@endif
+@endforeach
 ```
 
 ### Testing
