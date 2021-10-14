@@ -1,0 +1,55 @@
+{
+    "name": "eliseekn/countries-helper",
+    "description": "Helper for countries laravel package",
+    "keywords": [
+        "eliseekn",
+        "countries-helper"
+    ],
+    "homepage": "https://github.com/eliseekn/countries-helper",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "N'Guessan Kouadio Elisée",
+            "email": "eliseekn@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0",
+        "pragmarx/countries": "^0.7.2"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Eliseekn\\CountriesHelper\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Eliseekn\\CountriesHelper\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Eliseekn\\CountriesHelper\\CountriesHelperServiceProvider"
+            ],
+            "aliases": {
+                "CountriesHelper": "Eliseekn\\CountriesHelper\\CountriesHelperFacade"
+            }
+        }
+    }
+}
